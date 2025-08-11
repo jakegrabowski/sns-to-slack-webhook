@@ -34,7 +34,7 @@ export class SnsToSlackWebhook extends Construct {
             entry: path.join(__dirname, '..', 'lambda', 'index.ts'),
             logRetention: props.logRetentionDays ?? 30,
             timeout: Duration.seconds(10),
-            description: props.description ?? 'SNS to Slack',
+            description: props.description ?? 'SNS to Slack Webhook',
             reservedConcurrentExecutions: 5,
             paramsAndSecrets: ParamsAndSecretsLayerVersion.fromVersion(
                 ParamsAndSecretsVersions.V1_0_103,
